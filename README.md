@@ -71,7 +71,7 @@ Welcome to the Ramadan Dishes Challenge! This project aims to help Muslims plan 
    - The endpoint `/suggest` reads one query param:
     - **day**: The *Ramadan* day in which the dish will be cooked
    - The endpoint responds with one dish with the same format as the previous endpoint.
-      **Example:**
+   **Example:**
     ```json
     // GET http://localhost:3000/suggest?day=13
     // Response:
