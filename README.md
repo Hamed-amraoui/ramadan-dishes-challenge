@@ -26,8 +26,12 @@ Welcome to the Ramadan Dishes Challenge! This project aims to help users plan th
    ```bash
    git clone https://github.com/Hamed-amraoui/ramadan-dishes-challenge.git
    cd ramadan-dishes-challenge
+2. **Install Dependencies:**
+   ```bash
    go get -u github.com/gorilla/mux
+3. **Run the Application:**   
+   ```bash
    go build
    .\ramadan.exe
 
-   
+
