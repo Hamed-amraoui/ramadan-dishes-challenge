@@ -1,4 +1,4 @@
-# Ramadan Dishes Challenge
+# Backend Ramadan Dishes Challenge
 
 ## Overview
 
@@ -28,10 +28,61 @@ Welcome to the Ramadan Dishes Challenge! This project aims to help users plan th
    cd ramadan-dishes-challenge
 2. **Install Dependencies:**
    ```bash
-   go get -u github.com/gorilla/mux
+   go get github.com/gorilla/mux
 3. **Run the Application:**   
    ```bash
    go build
    .\ramadan.exe
 
+## Usage   
 
+1. **Endpoint 1: Cooking Time**
+   - The endpoint `/cooktime` reads two query params, which are:
+    - **ingredient**: The required ingredient in the dish.
+    - **day**: The *Ramadan* day in which the dish will be cooked
+   - The endpoint responds with:
+    - The dishes that contain the given ingredient.
+    - With each dish, the relative time to *Asr* prayer at which we should start cooking to have it ready 15 minutes before Maghrib prayer. The response should be in the exact following format: `X minutes before/after Asr`
+   **Example:**
+    ```json
+    // GET http://localhost:3000/cooktime?ingredient=Tuna&day=13
+    // Response:
+   [
+      {
+         "name": "Brik",
+         "ingredients": [
+            "Malsouqa",
+            "Egg",
+            "Tuna"
+         ],
+         "startcookingtime": "121 minutes After Asr"
+      },
+      {
+         "name": "Blunkett Salad",
+         "ingredients": [
+            "Bread",
+            "Horseradish",
+            "Egg",
+            "Tuna"
+         ],
+         "startcookingtime": "116 minutes After Asr"
+      }
+   ]
+2. **Endpoint 2: Suggestions**
+   - The endpoint `/suggest` reads one query param:
+    - **day**: The *Ramadan* day in which the dish will be cooked
+   - The endpoint responds with one dish with the same format as the previous endpoint.
+      **Example:**
+    ```json
+    // GET http://localhost:3000/suggest?day=13
+    // Response:
+   {
+   "name": "Mermez",
+   "ingredients": [
+      "Chickpea",
+      "Tomatoe Paste",
+      "Meat",
+      "Onion"
+   ],
+   "startcookingtime": "36 minutes After Asr"
+   }
