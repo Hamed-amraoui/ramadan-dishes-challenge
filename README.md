@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Ramadan Dishes Challenge! This project aims to help users plan their cooking schedule during the holy month of Ramadan based on the five Salawat system. The application will provide information on when to start cooking a specific dish and suggest a dish based on given ingredients.
+Welcome to the Ramadan Dishes Challenge! This project aims to help Muslims plan their cooking schedule during the holy month of Ramadan based on the five Salawat system. The application will provide information on when to start cooking a specific dish and suggest a dish based on given ingredients and days.
 
 ## Features
 
@@ -11,8 +11,7 @@ Welcome to the Ramadan Dishes Challenge! This project aims to help users plan th
    - The application should consider the cooking time for each dish to make the recommendation.
 
 2. **Dish Suggestion:**
-   - Provide a feature to suggest a dish based on given ingredients.
-   - Implement a creative algorithm that matches ingredients with dishes and returns a relevant suggestion.
+   - Provide a feature to suggest a dish based on given days.
 
 ## Technologies Used
 
